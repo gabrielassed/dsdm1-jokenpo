@@ -2,6 +2,8 @@
 
 JokenPo Flutter é um aplicativo desenvolvido em Flutter que simula o clássico jogo "Pedra, Papel ou Tesoura". O app possui uma interface intuitiva, animações suaves nas transições de imagens e texto, e uma contagem de pontos para acompanhar o desempenho do usuário versus o aplicativo.
 
+![Demo GIF](demo.gif)
+
 ## Instalação
 
 ### Pré-requisitos
