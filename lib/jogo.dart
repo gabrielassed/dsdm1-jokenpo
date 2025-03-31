@@ -96,7 +96,13 @@ class _JogoState extends State<Jogo> {
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
           ),
-          Image(image: _imagemApp),
+          AnimatedSwitcher(
+            duration: const Duration(milliseconds: 300),
+            transitionBuilder:
+                (child, animation) =>
+                    FadeTransition(opacity: animation, child: child),
+            child: Image(key: ValueKey(_imagemApp), image: _imagemApp),
+          ),
           Padding(
             padding: const EdgeInsets.only(top: 16, bottom: 16),
             child: Text(
@@ -150,13 +156,20 @@ class _JogoState extends State<Jogo> {
           ),
           Padding(
             padding: const EdgeInsets.only(top: 32, bottom: 16),
-            child: Text(
-              _resultadoFinal,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: _corResultado,
+            child: AnimatedSwitcher(
+              duration: const Duration(milliseconds: 300),
+              transitionBuilder:
+                  (child, animation) =>
+                      FadeTransition(opacity: animation, child: child),
+              child: Text(
+                _resultadoFinal,
+                key: ValueKey(_resultadoFinal),
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: _corResultado,
+                ),
               ),
             ),
           ),
